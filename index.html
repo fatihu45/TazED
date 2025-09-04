@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome to TazEd</title>
+  <title>TazEd - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="index.css">
-  
 </head>
-<body class="landing-body">
+<body>
   <header class="landing-header">
     <h1>TazEd</h1>
     <nav>
@@ -19,6 +19,21 @@
     <h2>Revolutionizing Education Through Smart Technology</h2>
     <p>Empowering students and teachers with an interactive AI-powered platform.</p>
     <a class="btn" id="getStartedBtn" href="#">Get Started</a>
+  </section>
+
+  <section class="about-section">
+    <h2>About TazEd</h2>
+    <p>
+      TazEd is an innovative EdTech platform designed to bridge the gap between students and teachers using modern technology. 
+      Our mission is to make learning accessible, engaging, and personalized for everyone. 
+      With features like AI tutoring, assignment management, and real-time engagement tracking, TazEd helps schools, teachers, and students achieve their academic goals efficiently.
+    </p>
+    <ul>
+      <li>AI-powered tutoring and academic support</li>
+      <li>Easy assignment and course management</li>
+      <li>Real-time student engagement analytics</li>
+      <li>Secure and scalable for schools of all sizes</li>
+    </ul>
   </section>
 
   <section class="features">
@@ -46,7 +61,7 @@
       <h3>Get Started</h3>
       <p>Are you registering a new school or signing up under an existing school?</p>
       <button onclick="window.location.href='school-signup.html'">Register a New School</button>
-      <button onclick="window.location.href='signup.html'">Sign Up Under your School</button>
+      <button onclick="window.location.href='signup.html'">Sign Up Under Existing School</button>
       <button class="close-modal" id="closeModalBtn">Cancel</button>
     </div>
   </div>
@@ -62,36 +77,9 @@
     closeModalBtn.addEventListener('click', function() {
       modalBg.classList.remove('active');
     });
-    // Optional: close modal when clicking outside modal box
     modalBg.addEventListener('click', function(e) {
       if (e.target === modalBg) modalBg.classList.remove('active');
     });
   </script>
-
-
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyABv0noSsiXcS0ULDeN8weIg18KUJeRdJ4",
-        authDomain: "tazed-7d8a3.firebaseapp.com",
-        projectId: "tazed-7d8a3",
-        storageBucket: "tazed-7d8a3.firebasestorage.app",
-        messagingSenderId: "474685959445",
-        appId: "1:474685959445:web:d27bd418184b25dc050d1c",
-        measurementId: "G-17717XG1J7"
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
-    
 </body>
 </html>
