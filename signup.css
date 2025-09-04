@@ -1,0 +1,131 @@
+.auth-body {
+  background: #f7f9fb;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(35,41,70,0.08);
+  padding: 40px 32px 32px 32px;
+  min-width: 320px;
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.role-select-card {
+  text-align: center;
+  animation: fadeIn 0.5s;
+}
+
+.role-btns {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.role-btn {
+  background: #eebf63;
+  color: #232946;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(35,41,70,0.06);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.role-btn:hover {
+  background: #ffd384;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.5s;
+}
+
+.signup-form h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #232946;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.signup-form input,
+.signup-form select {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  background: #f7f9fb;
+  color: #232946;
+  transition: border 0.2s;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  border: 1.5px solid #eebf63;
+  outline: none;
+}
+
+.signup-form button[type="submit"] {
+  background: #eebf63;
+  color: #232946;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.signup-form button[type="submit"]:hover {
+  background: #ffd384;
+}
+
+.switch-link {
+  text-align: center;
+  margin-top: -8px;
+}
+
+.switch-link a {
+  color: #232946;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.switch-link a:hover {
+  color: #eebf63;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 600px) {
+  .auth-container {
+    min-width: 0;
+    max-width: 98vw;
+    padding: 24px 8px;
+  }
+}

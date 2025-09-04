@@ -1,0 +1,159 @@
+/* Reset some defaults */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f9fb;
+    color: #222;
+    height: 100%;
+}
+
+/* Layout */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: #232946;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.04);
+}
+
+.sidebar h2 {
+    margin: 0 0 24px 24px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 24px;
+    color: #fff;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    transition: background 0.2s, border-color 0.2s;
+    border-radius: 0 20px 20px 0;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #394867;
+    border-left: 4px solid #eebf63;
+    color: #eebf63;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 40px 48px;
+    background: #f7f9fb;
+    min-height: 100vh;
+}
+
+.header {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #232946;
+}
+
+.section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.section h3 {
+    margin-top: 0;
+    color: #232946;
+}
+
+.button {
+    background: #eebf63;
+    color: #232946;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 16px;
+}
+
+.button:hover {
+    background: #ffd384;
+}
+
+/* Engagement summary cards */
+.summary-card {
+    background: #f1f6fb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(35,41,70,0.06);
+}
+
+.summary-card .title {
+    font-weight: 500;
+    color: #232946;
+    margin-bottom: 8px;
+}
+
+.summary-card .content {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .app-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        padding: 0;
+        box-shadow: none;
+    }
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .sidebar li {
+        flex: 1;
+        margin-bottom: 0;
+    }
+    .sidebar a {
+        border-radius: 0;
+        border-left: none;
+        border-bottom: 4px solid transparent;
+        text-align: center;
+    }
+    .sidebar a.active,
+    .sidebar a:hover {
+        border-bottom: 4px solid #eebf63;
+        border-left: none;
+    }
+    .main-content {
+        padding: 24px 8px;
+    }
+}

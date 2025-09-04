@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard - TazEd</title>
+  <link rel="stylesheet" href="student-dashboard.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">TazEd</a></div>
+      <nav>
+        <ul>
+          <li><a href="student-dashboard.html" class="active" id="dashboardLink">Dashboard</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="submissions.html">Submissions</a></li>
+          <li><a href="schools.html">Schools</a></li>
+          <li><a href="ai-tutor.html">AI Tutor</a></li>
+        </ul>
+      </nav>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+    <main class="main-content">
+      <header class="header">
+        <h2 id="greeting">Welcome, Student!</h2>
+      </header>
+      <section class="subjects-section">
+        <h3>Your Subjects</h3>
+        <div id="subjectsGrid" class="subjects-grid">
+          <!-- Subject cards will be rendered here -->
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="student-dashboard.js"></script>
+</body>
+</html>

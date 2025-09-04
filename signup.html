@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - TazEd</title>
+  <link rel="stylesheet" href="signup.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
+</head>
+<body class="auth-body">
+  <div class="auth-container">
+    <div id="roleSelect" class="role-select-card">
+      <h2>Are you a Student or a Teacher?</h2>
+      <div class="role-btns">
+        <button id="studentBtn" class="role-btn">Student</button>
+        <button id="teacherBtn" class="role-btn">Teacher</button>
+      </div>
+    </div>
+
+    <form id="studentForm" class="signup-form" style="display:none;">
+      <h2>Student Sign Up</h2>
+      <input type="text" id="studentName" placeholder="Full Name" required>
+      <input type="email" id="studentEmail" placeholder="Email" required>
+      <input type="password" id="studentPassword" placeholder="Password" required>
+      <select id="studentSchool" required>
+        <option value="">Select School</option>
+      </select>
+      <button type="submit">Sign Up</button>
+      <p class="switch-link"><a href="#" id="backToRole1">Back</a></p>
+    </form>
+
+    <form id="teacherForm" class="signup-form" style="display:none;">
+      <h2>Teacher Sign Up</h2>
+      <input type="text" id="teacherName" placeholder="Full Name" required>
+      <input type="email" id="teacherEmail" placeholder="Email" required>
+      <input type="password" id="teacherPassword" placeholder="Password" required>
+      <select id="teacherSchool" required>
+        <option value="">Select School</option>
+      </select>
+      <button type="submit">Sign Up</button>
+      <p class="switch-link"><a href="#" id="backToRole2">Back</a></p>
+    </form>
+
+    <p style="margin-top:18px;">Already have an account? <a href="login.html">Log In</a></p>
+  </div>
+  <script src="signup.js"></script>
+</body>
+</html>

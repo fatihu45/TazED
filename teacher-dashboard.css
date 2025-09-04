@@ -1,0 +1,215 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f9fb;
+  color: #232946;
+  min-height: 100vh;
+}
+.td-container {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  background: #232946;
+  color: #fff;
+  width: 220px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 0 0;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar nav ul li {
+  margin-bottom: 18px;
+}
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  padding: 10px 32px;
+  display: block;
+  border-radius: 8px 0 0 8px;
+  transition: background 0.2s;
+}
+.sidebar nav ul li a.active,
+.sidebar nav ul li a:hover {
+  background: #eebf63;
+  color: #232946;
+}
+.logout-btn {
+  background: #eebf63;
+  color: #232946;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 32px 16px 24px 16px;
+}
+.logout-btn:hover {
+  background: #ffd384;
+}
+.td-main {
+  flex: 1;
+  padding: 40px 48px;
+  background: #f7f9fb;
+  min-height: 100vh;
+}
+.td-header {
+  margin-bottom: 32px;
+}
+.td-dashboard-section, .td-engagement-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.td-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(35,41,70,0.08);
+  padding: 32px 28px;
+  margin-bottom: 32px;
+}
+.td-btn {
+  background: #eebf63;
+  color: #232946;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  margin-bottom: 18px;
+  transition: background 0.2s;
+}
+.td-btn:hover {
+  background: #ffd384;
+}
+#subjectsList {
+  margin-top: 18px;
+}
+.subject-item {
+  background: #f1f6fb;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.td-modal-bg {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(35,41,70,0.18);
+  align-items: center;
+  justify-content: center;
+}
+.td-modal-bg.active {
+  display: flex;
+}
+.td-modal {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(35,41,70,0.12);
+  padding: 36px 32px 28px 32px;
+  min-width: 280px;
+  max-width: 90vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  animation: fadeIn 0.4s;
+  position: relative;
+}
+.td-modal-close {
+  background: none;
+  color: #232946;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  cursor: pointer;
+}
+.td-modal form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.td-modal input, .td-modal select, .td-modal textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  background: #f7f9fb;
+  color: #232946;
+  transition: border 0.2s;
+}
+.td-modal input:focus, .td-modal select:focus, .td-modal textarea:focus {
+  border: 1.5px solid #eebf63;
+  outline: none;
+}
+.td-filters {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.td-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.td-table th, .td-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #f1f6fb;
+}
+.td-table th {
+  background: #f1f6fb;
+  color: #232946;
+  font-weight: 600;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@media (max-width: 900px) {
+  .td-main {
+    padding: 24px 8px;
+  }
+  .td-card {
+    padding: 18px 8px;
+  }
+}
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100px;
+    min-width: 80px;
+    padding: 18px 0 0 0;
+  }
+  .logo {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+  }
+  .sidebar nav ul li a {
+    font-size: 0.98rem;
+    padding: 8px 10px;
+  }
+}

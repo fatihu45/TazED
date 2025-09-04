@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Tutoring - TazEd</title>
+  <link rel="stylesheet" href="ai-tutor.css">
+  <script defer>
+    // Sidebar interactivity: highlight active link
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('.sidebar a');
+      links.forEach(link => {
+        if (link.href === window.location.href) {
+          link.classList.add('active');
+        }
+        link.addEventListener('click', function() {
+          links.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="logo">TazEd</div>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="submissions.html">Submissions</a></li>
+          <li><a href="schools.html">Schools</a></li>
+          <li><a href="ai-tutor.html" class="active">AI Tutor</a></li>
+
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="header">AI Tutoring Assistant</div>
+
+      <div class="section">
+        <h3>Ask a Question</h3>
+        <p>Type your question below and the AI tutor will provide a helpful answer.</p>
+        <form>
+          <textarea rows="3" placeholder="Type your question here..." style="width:100%;margin-bottom:10px;"></textarea>
+          <button type="submit" class="button">Ask AI</button>
+        </form>
+        <div class="summary-card" style="margin-top:20px;">
+          <div class="title">AI Answer</div>
+          <div class="content">
+            <!-- Example answer, replace with dynamic content -->
+            The mitochondria is the powerhouse of the cell, generating energy through cellular respiration.
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Summarize a Text</h3>
+        <p>Paste any text or upload a PDF, and the AI will generate a summary for you.</p>
+        <form>
+          <textarea rows="4" placeholder="Paste text to summarize..." style="width:100%;margin-bottom:10px;"></textarea>
+          <input type="file" accept="application/pdf" style="margin-bottom:10px;">
+          <button type="submit" class="button">Summarize Text</button>
+        </form>
+        <div class="summary-card" style="margin-top:20px;">
+          <div class="title">Text Summary</div>
+          <div class="content">
+            <!-- Example summary, replace with dynamic content -->
+            This is a summary of the provided text. The AI has extracted the key points and information.
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
