@@ -122,10 +122,37 @@
   to { opacity: 1; transform: translateY(0);}
 }
 
+/* Mobile-friendly Auth Container */
 @media (max-width: 600px) {
   .auth-container {
     min-width: 0;
     max-width: 98vw;
-    padding: 24px 8px;
+    padding: 18px 6px;
+    border-radius: 8px;
   }
+  .auth-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+  .auth-container form {
+    gap: 12px;
+  }
+  .auth-container input,
+  .auth-container button[type="submit"] {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+  .auth-container button[type="submit"] {
+    margin-top: 6px;
+  }
+  .auth-container p {
+    font-size: 0.98rem;
+    margin-top: 8px;
+  }
+}
+
+/* Make links and buttons easy to tap */
+.auth-container a,
+.auth-container button[type="submit"] {
+  touch-action: manipulation;
 }

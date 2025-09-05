@@ -201,8 +201,34 @@ body, html {
   .auth-container {
     min-width: 0;
     max-width: 98vw;
-    padding: 24px 8px;
+    padding: 18px 6px;
+    border-radius: 8px;
   }
+  .auth-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+  .auth-container form {
+    gap: 12px;
+  }
+  .auth-container input,
+  .auth-container button[type="submit"] {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+  .auth-container button[type="submit"] {
+    margin-top: 6px;
+  }
+  .auth-container p {
+    font-size: 0.98rem;
+    margin-top: 8px;
+  }
+}
+
+/* Make links and buttons easy to tap */
+.auth-container a,
+.auth-container button[type="submit"] {
+  touch-action: manipulation;
 }
 
 /* Footer */
@@ -329,47 +355,48 @@ footer {
       margin-top: 8px;
       cursor: pointer;
       text-decoration: underline;
+    }
       
 
   /* Responsive for mobile */
-  @media (max-width: 600px) {
-    .landing-header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 18px 8px 12px 8px;
-    }
-    .landing-header h1 {
-      font-size: 1.3rem;
-    }
-    .landing-header nav a {
-      margin-left: 16px;
-      font-size: 1rem;
-    }
-    .hero {
-      padding: 32px 8px 24px 8px;
-    }
-    .hero h2 {
-      font-size: 1.3rem;
-    }
-    .features {
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      padding: 18px 4px;
-    }
-    .feature {
-      width: 100%;
-      max-width: 100%;
-      min-width: 0;
-      padding: 18px 8px;
-    }
-    .about-section {
-      padding: 18px 8px;
-      max-width: 98vw;
-    }
-    footer {
-      font-size: 0.95rem;
-      padding: 14px 0 10px 0;
-      margin-top: 24px;
-    }
+    @media (max-width: 600px) {
+      .landing-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 8px 12px 8px;
+      }
+      .landing-header h1 {
+        font-size: 1.3rem;
+      }
+      .landing-header nav a {
+        margin-left: 16px;
+        font-size: 1rem;
+      }
+      .hero {
+        padding: 32px 8px 24px 8px;
+      }
+      .hero h2 {
+        font-size: 1.3rem;
+      }
+      .features {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 4px;
+      }
+      .feature {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 18px 8px;
+      }
+      .about-section {
+        padding: 18px 8px;
+        max-width: 98vw;
+      }
+      footer {
+        font-size: 0.95rem;
+        padding: 14px 0 10px 0;
+        margin-top: 24px;
+      }
     }
